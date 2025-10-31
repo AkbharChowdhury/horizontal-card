@@ -12,9 +12,10 @@ const similarRecipeCard = (recipe) => {
   const img = clone.querySelector('img');
   Object.assign(img, { src: getRecipeImage(id), alt: title });
 
-  clone.querySelector('h2').textContent = title;
+  clone.querySelector('#recipe-title-similar').textContent = title;
 //   clone.querySelector('a').setAttribute('href', recipeDetailURL(id));
-  clone.querySelector('p').textContent = `${calcDuration(minutes, DurationFormat.SHORT)}  | ${servings} serving${servings === 1 ? "" : "s"}`;
+  clone.querySelector('p').textContent = `${calcDuration(minutes, DurationFormat.SHORT)}`;
+  clone.querySelector('#servings').textContent = servings;
   container.append(clone);
 }
 const displaySimilarRecipes = recipes => recipes.forEach(similarRecipeCard);
