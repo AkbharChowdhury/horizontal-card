@@ -6,16 +6,17 @@ const similarRecipeCard = (recipe) => {
   const { id, title, readyInMinutes: minutes, servings } = recipe;
 
   const template = document.querySelector('template');
-  const container = document.querySelector('#similar');
+  const container = document.querySelector('#similar-recipe-list');
   const clone = template.content.cloneNode(true);
 
   const img = clone.querySelector('img');
   Object.assign(img, { src: getRecipeImage(id), alt: title });
 
   clone.querySelector('#recipe-title-similar').textContent = title;
-//   clone.querySelector('a').setAttribute('href', recipeDetailURL(id));
+  clone.querySelector('a').setAttribute('href', 'https://www.google.com');
   clone.querySelector('p').textContent = `${calcDuration(minutes, DurationFormat.SHORT)}`;
-  clone.querySelector('#servings').textContent = servings;
+  clone.querySelector('h3').textContent = `serves ${servings}`;
+
   container.append(clone);
 }
 const displaySimilarRecipes = recipes => recipes.forEach(similarRecipeCard);
