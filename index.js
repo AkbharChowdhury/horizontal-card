@@ -2,7 +2,7 @@ import { calcDuration, DurationFormat } from './utils.js';
 
 const getRecipeImage = id => `https://img.spoonacular.com/recipes/${id}-556x370.jpg`;
 
-const similarRecipeCard = (recipe) => {
+const similarRecipeCard = (recipe, i) => {
   const { id, title, readyInMinutes: minutes, servings } = recipe;
 
   const template = document.querySelector('template');
@@ -10,7 +10,8 @@ const similarRecipeCard = (recipe) => {
   const clone = template.content.cloneNode(true);
 
   const img = clone.querySelector('img');
-  Object.assign(img, { src: getRecipeImage(id), alt: title });
+  const image = i === 2 ? 'https://t3.ftcdn.net/jpg/02/36/88/12/360_F_236881295_odo9H1vtTZUvewumPdeRE4tHUtVa2UJg.jpg': getRecipeImage(id) 
+  Object.assign(img, { src: image, alt: title });
 
   clone.querySelector('#recipe-title-similar').textContent = title;
   clone.querySelector('a').setAttribute('href', 'https://www.google.com');
@@ -58,6 +59,7 @@ const recipes = [
     "servings": 8,
     "sourceUrl": "https://www.foodista.com/recipe/RLCW4BRL/beet-and-blue-cheese-salad-with-citrus-vinaigrette-dressing"
 }
-]
-
-displaySimilarRecipes(recipes)
+];
+recipes.at(-1).title+=' and Citrus Chicken With Apricot, Peanuts & Mint'
+recipes.at(2).image = 'https://t3.ftcdn.net/jpg/02/36/88/12/360_F_236881295_odo9H1vtTZUvewumPdeRE4tHUtVa2UJg.jpg'
+displaySimilarRecipes(recipes);
