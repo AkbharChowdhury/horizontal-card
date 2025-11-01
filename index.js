@@ -23,7 +23,6 @@ const similarRecipeCard = (recipe, i) => {
 const displaySimilarRecipes = recipes => recipes.forEach(similarRecipeCard);
 const showDishTypeTags = dishes => {
       const container = document.querySelector('#dish-list');
-
       dishes.forEach(dish =>{
         const template = document.querySelector('#dish-types-template');
         const clone = template.content.cloneNode(true);
@@ -31,10 +30,8 @@ const showDishTypeTags = dishes => {
         container.append(clone);
       });
 
-
-    //  dishes.map(dish => `<span class="badge bg-secondary text-decoration-none link-light m-2">${titleCase(dish)}</span>`).join().replaceAll(',', '')
 }
-showDishTypeTags(['lunch', 'main course', 'main dish', 'dinner'])
+// showDishTypeTags(['lunch', 'main course', 'main dish', 'dinner'])
 const recipes = [
     {
     "id": 645707,
