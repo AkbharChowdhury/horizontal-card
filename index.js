@@ -1,11 +1,11 @@
-import { calcDuration, DurationFormat } from './utils.js';
+import { calcDuration, DurationFormat, titleCase } from './utils.js';
 
 const getRecipeImage = id => `https://img.spoonacular.com/recipes/${id}-556x370.jpg`;
 
 const similarRecipeCard = (recipe, i) => {
   const { id, title, readyInMinutes: minutes, servings } = recipe;
 
-  const template = document.querySelector('template');
+  const template = document.querySelector('#similar-recipes-template');
   const container = document.querySelector('#similar-recipe-list');
   const clone = template.content.cloneNode(true);
 
@@ -21,7 +21,20 @@ const similarRecipeCard = (recipe, i) => {
   container.append(clone);
 }
 const displaySimilarRecipes = recipes => recipes.forEach(similarRecipeCard);
+const showDishTypeTags = dishes => {
+      const container = document.querySelector('#dish-list');
 
+      dishes.forEach(dish =>{
+        const template = document.querySelector('#dish-types-template');
+        const clone = template.content.cloneNode(true);
+        clone.querySelector('span').innerText = titleCase(dish);
+        container.append(clone);
+      });
+
+
+    //  dishes.map(dish => `<span class="badge bg-secondary text-decoration-none link-light m-2">${titleCase(dish)}</span>`).join().replaceAll(',', '')
+}
+showDishTypeTags(['lunch', 'main course', 'main dish', 'dinner'])
 const recipes = [
     {
     "id": 645707,

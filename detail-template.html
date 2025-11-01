@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Details:</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <!-- Page content-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1">Balti Chicken</h1>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2" id="additional-details">Serves 5, ready in 45 minutes</div>
+                            <!-- Post categories-->
+                            <!-- <span class="badge bg-secondary text-decoration-none link-light m-2">Lunch</span>
+                            <span class="badge bg-secondary text-decoration-none link-light m-2">Main Course</span>
+                            <span class="badge bg-secondary text-decoration-none link-light m-2">Main Dish</span> -->
+                            <div id="dish-list">
+                                <template id="dish-types-template">
+                                    <span class="badge bg-secondary text-decoration-none link-light m-2">Dinner</span>
+                                </template>
+                            </div>
+                            <section id="tags">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="tags-data"></div>
+                            </div>
+                        </div>
+                    </section>
+                        </header>
+                        <!-- Preview image figure-->
+                        <figure class="mb-4"><img id="image" class="img-fluid rounded" src="https://img.spoonacular.com/recipes/633959-556x370.jpg" alt="..." /></figure>
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            <p class="fs-5 mb-4" id="summary">Balti Chicken requires around 45 minutes from start to finish. One serving contains 520 calories, 25g of protein, and 17g of fat. This recipe serves 5 and costs $1.57 per serving. It works well as a main course. 1 person were glad they tried this recipe. If you have boned and skinned chicken breast halves, rice, bell pepper, and a few other ingredients on hand, you can make it. It is brought to you by Foodista. It is a good option if you're following a gluten free and dairy free diet. With a spoonacular score of 59%, this dish is solid. If you like this recipe, you might also like recipes such as Balti Butter Chicken, Healthier chicken balti, and Balti Chicken Pasanda.</p>
+                            <h2 class="fw-bolder mb-4 mt-5">Ingredients</h2>
+                            <hr>
+                            <ul id="ingredients">
+                                <!-- <li>4 boned and skinned chicken breast halves cut in 1" cubes</li>
+                                <li>2 cups long-grain white rice cooked</li>
+                                <li>fresh cilantro chopped</li>
+                                <li>1 green bell pepper chopped</li>
+                                <li>oil for cooking</li>
+                                <li>1 large onion chopped</li>
+                                <li>1 red bell pepper chopped</li> -->
+                            </ul>
+
+                            <h2 class="fw-bolder mb-4 mt-5" id="instructions-header">Instructions</h2>
+                            <hr>
+                            <ol id="steps">
+                                <!-- <li>In a large heavy skillet or wok, heat oil over medium high heat and cook chicken until pieces are no longer pink.</li>
+                                <li>Add the chopped bell peppers and onions to the pan and stir fry 3-5 minutes.</li> -->
+                            </ol>
+                </section>
+                    </article>
+                    <!-- Comments section-->
+                    <section class="mb-5">
+                         <h2>You might also like</h2>
+                         <hr>
+                             <section id="similar-recipes">
+        <div class="cream-bg">
+            <div class="container">
+                <div class="row g-5 d-flex justify-content-evenly" id="similar-recipe-list">
+                    <template id="similar-recipes-template">
+                        <div class="col-lg-6">
+                            <div class="card custom-card h-100">
+                                <div class="row g-0">
+                                    <div class="col-6 col-md-5">
+                                        <img alt="image" class="card-img img-fluid rounded">
+                                    </div>
+                                    <div class="col-6 col-md-7">
+                                        <div class="card-body fd-flex flex-column">
+                                            <div class="h-100">
+                                                <h3 class="card-title"><strong>Serves 12</strong></h3>
+                                                <h5 class="card-title" id="recipe-title-similar">Grilled Figs With Blue
+                                                    Cheese and Citrus Honey</h5>
+                                                <p class="card-text"> 45 min</p>
+                                                <a target="_blank" role="button" class="btn btn-dark mt-2"><i
+                                                        class="bi bi-fork-knife  me-1"></i> View more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
+                    </section>
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <!-- Search widget-->
+
+                    <div id="nutrition-label-widget">soems</div>
+                   
+                </div>
+            </div>
+        </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
